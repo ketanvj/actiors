@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'co.incubyte'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.3.2'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.3.2'
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-core
+    implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.3.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
