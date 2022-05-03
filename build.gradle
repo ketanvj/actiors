@@ -18,6 +18,10 @@ dependencies {
     testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.3.2'
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-core
     implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.3.2'
+// https://mvnrepository.com/artifact/com.microsoft.playwright/playwright
+    implementation group: 'com.microsoft.playwright', name: 'playwright', version: '1.21.0'
+
+
 
 }
 

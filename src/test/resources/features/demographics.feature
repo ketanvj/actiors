@@ -8,16 +8,16 @@ Feature: Demographics
     And each result should display image, full name
     And there is an option to view other details
 
-  Scenario: if searched name is not avaialble in the records.
+  Scenario: if searched name is not available in the records.
 
-    Given A person name "Tom Cruise"
+    Given A person name "XYZ ABC"
     When A fan searches for  it
     And if there is no such person available
     Then display a funny error message
 
   Scenario: if searched name does not have image
 
-    Given A person name "Tom Cruise"
+    Given A person name "Oscar Coleman"
     When A fan searches for  it
     And if there is no image available for that person
     Then display a generic avatar
@@ -30,6 +30,6 @@ Feature: Demographics
 
   Scenario: View Details of the actor
 
-    Given The fan is on the view details page
+    Given The fan is on the view details page for "Tom Cruise"
     Then it should display name, image, age, gender, place of birth
     And it also displays top five movies the person was part of
